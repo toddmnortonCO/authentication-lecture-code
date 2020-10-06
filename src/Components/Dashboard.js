@@ -6,13 +6,18 @@ const Dashboard = props => {
     console.log(props)
 
     const logout = () => {
-        //code here
+        // Run the action to clear the user from redux state
+        props.clearUser();
+
+        // Navigate user back to Auth page
+        props.history.push('/');
     }
 
     return (
         <main className='dashboard'>
             <section className='user-info'>
                 <h3>{props.user.email}</h3>
+                <button onClick={logout}>Log Out</button>
             </section>
         </main>
     )
