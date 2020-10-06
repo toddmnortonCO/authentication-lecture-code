@@ -21,4 +21,9 @@ massive({
   console.log("db connected");
 });
 
+//Auth Endpoints
+app.post('api/register', authCtrl.register)
+app.post('api/login', authCtrl.login)
+app.get('api/logout', authCtrl.logout)
+
 app.listen(SERVER_PORT, () => console.log(`Server running on ${SERVER_PORT}`));

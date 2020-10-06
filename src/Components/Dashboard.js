@@ -12,7 +12,7 @@ const Dashboard = props => {
     return (
         <main className='dashboard'>
             <section className='user-info'>
-                
+                <h3>{props.user.email}</h3>
             </section>
         </main>
     )
